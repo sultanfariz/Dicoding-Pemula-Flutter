@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:dicoding_pemula_flutter/components/PlayPauseButton.dart';
+import 'package:dicoding_pemula_flutter/constants/Colour.dart';
 
 class WhiteNoiseScreen extends StatelessWidget {
   @override
@@ -8,9 +9,11 @@ class WhiteNoiseScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('White Noise Music'),
       ),
-      // body: LayoutBuilder(
-      // builder: (BuildContext context, BoxConstraints constraints) {},
-      // ),
+      body: LayoutBuilder(
+        builder: (BuildContext context, BoxConstraints constraints) {
+          return MusicPlayerDetails();
+        },
+      ),
     );
   }
 }
@@ -45,7 +48,7 @@ class MusicPlayerDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         // crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Row(
@@ -53,29 +56,23 @@ class MusicPlayerDetails extends StatelessWidget {
             children: <Widget>[
               Icon(
                 Icons.shuffle_rounded,
-                color: Colors.lightBlue[600],
+                color: buttonBlue,
                 size: 20,
               ),
               Icon(
                 Icons.fast_rewind_rounded,
-                color: Colors.lightBlue[600],
+                color: buttonBlue,
                 size: 40,
               ),
               PlayPauseButton(),
-              // Icon(
-              //   Icons.pause_circle_filled,
-              //   color: Colors.lightBlue[600],
-              //   size: 60,
-              // ),
-              // Icon(Icons.play_circle_filled),
               Icon(
                 Icons.fast_forward_rounded,
-                color: Colors.lightBlue[600],
+                color: buttonBlue,
                 size: 40,
               ),
               Icon(
                 Icons.repeat_rounded,
-                color: Colors.lightBlue[600],
+                color: buttonBlue,
                 size: 20,
               ),
             ],

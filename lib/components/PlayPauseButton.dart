@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:dicoding_pemula_flutter/constants/Colour.dart';
 
 class PlayPauseButton extends StatefulWidget {
   @override
@@ -17,7 +18,7 @@ class _PlayPauseButtonState extends State<PlayPauseButton> {
       iconSize: 60,
       icon: Icon(
         isPaused ? Icons.play_circle_filled : Icons.pause_circle_filled,
-        color: Colors.lightBlue[600],
+        color: buttonBlue,
       ),
       onPressed: () {
         setState(() {

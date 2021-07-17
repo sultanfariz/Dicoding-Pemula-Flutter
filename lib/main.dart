@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:dicoding_pemula_flutter/views/white_noise_screen.dart';
+import 'package:dicoding_pemula_flutter/views/main_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,8 +24,8 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-      // home: MusicPlayerDetails(),
+      // home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MainScreen(),
     );
   }
 }

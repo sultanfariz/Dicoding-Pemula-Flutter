@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 
-// const lightBlue = Color(0xFF6045E2);
-const biru = Color(0xFF6045E2);
-const hijau = Color(0xFF2ECC71);
-const merah = Color(0xFFFF1800);
-const textPrimColor = Color(0xFF121212);
-const textSecColor = Color(0xFF5E5E5E);
-const textOffColor = Color(0xFFAAAAAA);
+const buttonBlue = Color(0xFF2A8CFF);
+const cardBlue = Color(0xFF0284C7);
+const cardGreen = Color(0xFF02C7AF);
