@@ -16,7 +16,7 @@ class ToolboxCard extends StatelessWidget {
           },
           child: Padding(
             padding: const EdgeInsets.only(
-                left: 25.0, right: 25.0, top: 40.0, bottom: 20.0),
+                left: 25.0, right: 25.0, top: 20.0, bottom: 20.0),
             child: Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20.0),
@@ -32,10 +32,18 @@ class ToolboxCard extends StatelessWidget {
                     ],
                   ),
                   borderRadius: BorderRadius.circular(20.0),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.35),
+                      spreadRadius: 0,
+                      blurRadius: 5,
+                      offset: Offset(0, 4), // changes position of shadow
+                    ),
+                  ],
                 ),
                 child: Padding(
                   padding: const EdgeInsets.only(
-                      left: 5.0, right: 5.0, top: 20.0, bottom: 20.0),
+                      left: 5.0, right: 5.0, top: 15.0, bottom: 15.0),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
@@ -59,6 +67,7 @@ class ToolboxCard extends StatelessWidget {
                                 style: TextStyle(
                                   letterSpacing: 1.0,
                                   fontFamily: 'Montserrat',
+                                  fontWeight: FontWeight.w400,
                                   fontSize: 17.0,
                                   color: Colors.white,
                                 ),

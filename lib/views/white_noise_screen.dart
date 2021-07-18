@@ -6,13 +6,82 @@ class WhiteNoiseScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('White Noise Music'),
-      ),
-      body: LayoutBuilder(
-        builder: (BuildContext context, BoxConstraints constraints) {
-          return MusicPlayerDetails();
-        },
+      // appBar: AppBar(
+      //   title: Text(
+      //     'White Noise Music',
+      //     style: TextStyle(
+      //         fontFamily: 'Montserrat',
+      //         fontWeight: FontWeight.w700,
+      //         fontSize: 17.0),
+      //   ),
+      //   backgroundColor: bgBlue,
+      // ),
+      body: SingleChildScrollView(
+        child: Column(
+          // crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            SafeArea(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    CircleAvatar(
+                      backgroundColor: Colors.grey,
+                      child: IconButton(
+                        icon: Icon(
+                          Icons.arrow_back,
+                          color: Colors.white,
+                        ),
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                      ),
+                    ),
+                    // Padding(padding: const EdgeInsets.only(left: ))
+                    Container(
+                      margin: const EdgeInsets.only(left: 20),
+                      child: Text(
+                        'White Noise Music',
+                        style: TextStyle(
+                            fontFamily: 'Montserrat',
+                            fontWeight: FontWeight.w700,
+                            fontSize: 17.0),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Expanded(
+              child: MusicPlayerDetails(),
+              // child: Container(
+              //     // decoration: BoxDecoration(color: bgBlue),
+              //     // child: Container(
+              //     //   margin: const EdgeInsets.only(top: 20),
+              //     //   decoration: BoxDecoration(
+              //     //     borderRadius: BorderRadius.only(
+              //     //       topLeft: Radius.circular(40),
+              //     //       topRight: Radius.circular(40),
+              //     //     ),
+              //     //     color: Colors.white,
+              //     //   ),
+              //     //   child: Column(
+              //     //     mainAxisAlignment: MainAxisAlignment.end,
+              //     //     crossAxisAlignment: CrossAxisAlignment.center,
+              //     //     children: <Widget>[
+              //     //       Expanded(child: MusicPlayerDetails()),
+              //     //     ],
+              //     //   ),
+              //     // ),
+              //     ),
+            ),
+
+            // return MusicPlayerDetails();
+            // },
+            // ),
+          ],
+        ),
       ),
     );
   }
@@ -20,29 +89,6 @@ class WhiteNoiseScreen extends StatelessWidget {
 
 class MusicPlayerDetails extends StatelessWidget {
   MusicPlayerDetails({Key? key}) : super(key: key);
-
-//   final TourismPlace place;
-
-//   DetailWebPage({required this.place});
-
-//   @override
-//   _MusicPlayerDetailsState createState() => _MusicPlayerDetailsState();
-// }
-
-// class _MusicPlayerDetailsState extends State<MusicPlayerDetails> {
-//   bool status = true;
-
-//   pauseButton() {
-//     setState(() {
-//       status = false;
-//     });
-//   }
-
-//   playButton() {
-//     setState(() {
-//       status = true;
-//     });
-//   }
 
   @override
   Widget build(BuildContext context) {
