@@ -6,81 +6,115 @@ class WhiteNoiseScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text(
-      //     'White Noise Music',
-      //     style: TextStyle(
-      //         fontFamily: 'Montserrat',
-      //         fontWeight: FontWeight.w700,
-      //         fontSize: 17.0),
-      //   ),
-      //   backgroundColor: bgBlue,
-      // ),
       body: SingleChildScrollView(
-        child: Column(
-          // crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            SafeArea(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    CircleAvatar(
-                      backgroundColor: Colors.grey,
-                      child: IconButton(
-                        icon: Icon(
-                          Icons.arrow_back,
-                          color: Colors.white,
+        child: Container(
+          decoration: BoxDecoration(color: bgBlue),
+          child: Column(
+            children: <Widget>[
+              SafeArea(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      CircleAvatar(
+                        // backgroundColor: Colors.grey,
+                        child: IconButton(
+                          icon: Icon(
+                            Icons.arrow_back,
+                            color: Colors.white,
+                          ),
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
                         ),
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
                       ),
-                    ),
-                    // Padding(padding: const EdgeInsets.only(left: ))
-                    Container(
-                      margin: const EdgeInsets.only(left: 20),
-                      child: Text(
-                        'White Noise Music',
-                        style: TextStyle(
-                            fontFamily: 'Montserrat',
-                            fontWeight: FontWeight.w700,
-                            fontSize: 17.0),
+                      Container(
+                        margin: const EdgeInsets.only(left: 20),
+                        child: Text(
+                          'White Noise Music',
+                          style: TextStyle(
+                              fontFamily: 'Montserrat',
+                              color: Colors.white,
+                              fontWeight: FontWeight.w700,
+                              fontSize: 17.0),
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
-            ),
-            Expanded(
-              child: MusicPlayerDetails(),
-              // child: Container(
-              //     // decoration: BoxDecoration(color: bgBlue),
-              //     // child: Container(
-              //     //   margin: const EdgeInsets.only(top: 20),
-              //     //   decoration: BoxDecoration(
-              //     //     borderRadius: BorderRadius.only(
-              //     //       topLeft: Radius.circular(40),
-              //     //       topRight: Radius.circular(40),
-              //     //     ),
-              //     //     color: Colors.white,
-              //     //   ),
-              //     //   child: Column(
-              //     //     mainAxisAlignment: MainAxisAlignment.end,
-              //     //     crossAxisAlignment: CrossAxisAlignment.center,
-              //     //     children: <Widget>[
-              //     //       Expanded(child: MusicPlayerDetails()),
-              //     //     ],
-              //     //   ),
-              //     // ),
-              //     ),
-            ),
-
-            // return MusicPlayerDetails();
-            // },
-            // ),
-          ],
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(40),
+                    topRight: Radius.circular(40),
+                  ),
+                  color: Colors.white,
+                ),
+                margin: const EdgeInsets.only(top: 10),
+                child: Container(
+                  child: Column(
+                    children: <Widget>[
+                      Padding(
+                        padding:
+                            const EdgeInsets.only(top: 30, left: 16, right: 16),
+                        child: Container(
+                          margin: const EdgeInsets.only(bottom: 30),
+                          child: Image.asset('images/summer_illust.png'),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(
+                            top: 20, left: 32, right: 32, bottom: 10),
+                        child: Container(
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Autumn Wind',
+                                    style: TextStyle(
+                                      fontFamily: 'Poppins',
+                                      color: textGrey,
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 12,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      // Expanded(
+                      //   child: MusicPlayerDetails(),
+                      // ),
+                      MusicPlayerDetails(),
+                    ],
+                  ),
+                  // child: Container(
+                  //   margin: const EdgeInsets.only(top: 20),
+                  //   decoration: BoxDecoration(
+                  //     borderRadius: BorderRadius.only(
+                  //       topLeft: Radius.circular(40),
+                  //       topRight: Radius.circular(40),
+                  //     ),
+                  //     color: Colors.white,
+                  //   ),
+                  //   child: Column(
+                  //     mainAxisAlignment: MainAxisAlignment.end,
+                  //     crossAxisAlignment: CrossAxisAlignment.center,
+                  //     children: <Widget>[
+                  //       Expanded(child: MusicPlayerDetails()),
+                  //     ],
+                  //   ),
+                  // ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

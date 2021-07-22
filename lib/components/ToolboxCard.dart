@@ -50,7 +50,7 @@ class ToolboxCard extends StatelessWidget {
                       Expanded(
                         flex: 2,
                         child: Icon(
-                          Icons.equalizer_rounded,
+                          Icons.music_note_rounded,
                           color: Colors.white,
                           size: 60,
                         ),
