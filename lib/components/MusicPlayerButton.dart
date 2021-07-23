@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:dicoding_pemula_flutter/components/PlayPauseButton.dart';
+import 'package:dicoding_pemula_flutter/components/DynamicButton.dart';
 import 'package:dicoding_pemula_flutter/constants/Colour.dart';
 
 class MusicPlayerButton extends StatelessWidget {
@@ -31,11 +31,7 @@ class MusicPlayerButton extends StatelessWidget {
                 color: buttonBlue,
                 size: 40,
               ),
-              Icon(
-                Icons.repeat_rounded,
-                color: buttonBlue,
-                size: 20,
-              ),
+              RepeatButton(),
             ],
           )
         ],
