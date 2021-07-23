@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:dicoding_pemula_flutter/views/white_noise_screen.dart';
+import 'package:dicoding_pemula_flutter/components/MusicPlayerButton.dart';
 import 'package:dicoding_pemula_flutter/views/main_screen.dart';
 
 void main() {
@@ -103,7 +103,7 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
-            MusicPlayerDetails(),
+            MusicPlayerButton(),
           ],
         ),
       ),

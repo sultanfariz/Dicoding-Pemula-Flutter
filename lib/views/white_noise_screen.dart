@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:dicoding_pemula_flutter/components/PlayPauseButton.dart';
+import 'package:dicoding_pemula_flutter/components/MusicPlayerButton.dart';
 import 'package:dicoding_pemula_flutter/constants/Colour.dart';
 
 class WhiteNoiseScreen extends StatelessWidget {
@@ -54,6 +54,7 @@ class WhiteNoiseScreen extends StatelessWidget {
                 ),
                 margin: const EdgeInsets.only(top: 10),
                 child: Container(
+                  padding: const EdgeInsets.only(bottom: 60),
                   child: Column(
                     children: <Widget>[
                       Padding(
@@ -84,6 +85,37 @@ class WhiteNoiseScreen extends StatelessWidget {
                                   ),
                                 ],
                               ),
+                              Divider(
+                                color: bgGrey,
+                                // height: 25,
+                                thickness: 3,
+                                // indent: 5,
+                                // endIndent: 5,
+                              ),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    '00.00',
+                                    style: TextStyle(
+                                      fontFamily: 'Poppins',
+                                      color: buttonBlue,
+                                      fontWeight: FontWeight.w300,
+                                      fontSize: 10,
+                                    ),
+                                  ),
+                                  Text(
+                                    '02.30',
+                                    style: TextStyle(
+                                      fontFamily: 'Poppins',
+                                      color: buttonBlue,
+                                      fontWeight: FontWeight.w300,
+                                      fontSize: 10,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ],
                           ),
                         ),
@@ -91,7 +123,7 @@ class WhiteNoiseScreen extends StatelessWidget {
                       // Expanded(
                       //   child: MusicPlayerDetails(),
                       // ),
-                      MusicPlayerDetails(),
+                      MusicPlayerButton(),
                     ],
                   ),
                   // child: Container(
@@ -116,48 +148,6 @@ class WhiteNoiseScreen extends StatelessWidget {
             ],
           ),
         ),
-      ),
-    );
-  }
-}
-
-class MusicPlayerDetails extends StatelessWidget {
-  MusicPlayerDetails({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        // crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              Icon(
-                Icons.shuffle_rounded,
-                color: buttonBlue,
-                size: 20,
-              ),
-              Icon(
-                Icons.fast_rewind_rounded,
-                color: buttonBlue,
-                size: 40,
-              ),
-              PlayPauseButton(),
-              Icon(
-                Icons.fast_forward_rounded,
-                color: buttonBlue,
-                size: 40,
-              ),
-              Icon(
-                Icons.repeat_rounded,
-                color: buttonBlue,
-                size: 20,
-              ),
-            ],
-          )
-        ],
       ),
     );
   }
