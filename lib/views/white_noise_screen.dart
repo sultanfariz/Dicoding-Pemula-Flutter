@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:dicoding_pemula_flutter/components/MusicPlayerButton.dart';
+import 'package:dicoding_pemula_flutter/components/music_player_button.dart';
 import 'package:dicoding_pemula_flutter/constants/Colour.dart';
 
 class WhiteNoiseScreen extends StatelessWidget {
@@ -18,7 +18,6 @@ class WhiteNoiseScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       CircleAvatar(
-                        // backgroundColor: Colors.grey,
                         child: IconButton(
                           icon: Icon(
                             Icons.arrow_back,
@@ -87,10 +86,7 @@ class WhiteNoiseScreen extends StatelessWidget {
                               ),
                               Divider(
                                 color: bgGrey,
-                                // height: 25,
                                 thickness: 3,
-                                // indent: 5,
-                                // endIndent: 5,
                               ),
                               Row(
                                 mainAxisAlignment:
@@ -120,29 +116,9 @@ class WhiteNoiseScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      // Expanded(
-                      //   child: MusicPlayerDetails(),
-                      // ),
                       MusicPlayerButton(),
                     ],
                   ),
-                  // child: Container(
-                  //   margin: const EdgeInsets.only(top: 20),
-                  //   decoration: BoxDecoration(
-                  //     borderRadius: BorderRadius.only(
-                  //       topLeft: Radius.circular(40),
-                  //       topRight: Radius.circular(40),
-                  //     ),
-                  //     color: Colors.white,
-                  //   ),
-                  //   child: Column(
-                  //     mainAxisAlignment: MainAxisAlignment.end,
-                  //     crossAxisAlignment: CrossAxisAlignment.center,
-                  //     children: <Widget>[
-                  //       Expanded(child: MusicPlayerDetails()),
-                  //     ],
-                  //   ),
-                  // ),
                 ),
               ),
             ],

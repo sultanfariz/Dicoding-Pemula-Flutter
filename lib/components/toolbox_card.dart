@@ -37,7 +37,9 @@ class ToolboxCard extends StatelessWidget {
                       color: Colors.black.withOpacity(0.35),
                       spreadRadius: 0,
                       blurRadius: 5,
-                      offset: Offset(0, 4), // changes position of shadow
+                      offset: Offset(0, 4),
+
+                      /// changes position of shadow
                     ),
                   ],
                 ),

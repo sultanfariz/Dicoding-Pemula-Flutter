@@ -1,19 +1,14 @@
 import 'package:dicoding_pemula_flutter/constants/Colour.dart';
 import 'package:flutter/material.dart';
-import 'package:dicoding_pemula_flutter/views/white_noise_screen.dart';
-import 'package:dicoding_pemula_flutter/components/ToolboxCard.dart';
+import 'package:dicoding_pemula_flutter/components/toolbox_card.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text('Health Toolbox'),
-      // ),
       body: Stack(
         children: <Widget>[
-          // Image.asset('images/bg_main_screen.png'),
           SvgPicture.asset(
             'images/bg_main_screen.svg',
             alignment: Alignment.center,
@@ -29,7 +24,6 @@ class MainScreen extends StatelessWidget {
                     Expanded(
                       flex: 3,
                       child: Container(
-                        // margin: const EdgeInsets.only(top: 170),
                         decoration: BoxDecoration(
                           color: bgBlue,
                         ),
@@ -66,7 +60,6 @@ class MainScreen extends StatelessWidget {
                     Expanded(
                       flex: 9,
                       child: Container(
-                        // margin: const EdgeInsets.only(top: 170),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(40),
@@ -86,8 +79,6 @@ class MainScreen extends StatelessWidget {
                   ],
                 ),
               );
-              // return WhiteNoiseScreen();
-              // return ToolboxCard();
             },
           ),
         ],

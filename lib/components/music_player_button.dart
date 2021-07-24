@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:dicoding_pemula_flutter/components/DynamicButton.dart';
+import 'package:dicoding_pemula_flutter/components/play_pause_button.dart';
+import 'package:dicoding_pemula_flutter/components/repeat_button.dart';
 import 'package:dicoding_pemula_flutter/constants/Colour.dart';
 
 class MusicPlayerButton extends StatelessWidget {
@@ -9,8 +10,6 @@ class MusicPlayerButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Column(
-        // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        // crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
